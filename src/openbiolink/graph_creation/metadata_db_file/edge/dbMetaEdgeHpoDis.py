@@ -7,21 +7,24 @@ class DbMetaEdgeHpoDis(DbMetadataEdge):
     # URL = "http://compbio.charite.de/jenkins/job/hpo.annotations/1269/artifact/misc/phenotype_annotation_hpoteam.tab"
     URL = "http://purl.obolibrary.org/obo/hp/hpoa/phenotype_annotation.tab"
     OFILE_NAME = "HPO_disease_phenotype.tab"
+    #disease-db	disease-identifier	disease-name	negation	HPO-ID	reference	evidence-code	onset	frequencyHPO	modifier	sub-ontology	alt-names	curators	frequencyRaw	sex
+
     COLS = [
-        "DB",
-        "DOI",
-        "DBname",
-        "qulifier",
-        "HPO_ID",
-        "DB_ref",
-        "evidence_code",
-        "onsetMod",
-        "freq",
-        "sex",
-        "mod",
-        "aspect",
-        "date",
-        "assigned_by",
+        "DB", # disease-db	
+        "DOI", # disease-identifier	
+        "DBname", # disease-name	
+        "negation", # negation
+        "HPO_ID", # HPO-ID	
+        "DB_ref",  # reference	
+        "evidence_code", # evidence-code	
+        "onsetMod", # onset
+        "freq", # frequencyHPO
+        "mod", # modifier	
+        "sub_ontology", # sub-ontology	
+        "alt_names", # alt-names	
+        "assigned_by", # curators	
+        "freq_raw", # frequencyRaw	
+        "sex", # sex
     ]
     FILTER_COLS = ["DB", "DOI", "HPO_ID", "evidence_code"]
     HEADER = 1
